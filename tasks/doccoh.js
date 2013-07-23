@@ -16,7 +16,7 @@ module.exports = function (grunt) {
     var options = helpers.options(this);
 
     grunt.verbose.writeflags(options, "Options");
-    var src = grunt.file.expand(this.file.src);
+    var src = grunt.file.expand(this.data.src);
 
     docco.document(src, options, function(err, result, code){
       grunt.log.writeln("Doccoed [" + src.join(", ") + "]; " + err ? err : "(No errors)" + "\n" + result + " " + code);
